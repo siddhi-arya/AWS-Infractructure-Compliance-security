@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+    stage('Fetch and Post AWS Security Hub Findings') {
+         steps {
+             script {
+                 sh "/var/lib/jenkins/workspace/aws_security_pipeline/script.sh"
+                }
+            }
+         }
+       
+    }
+}
